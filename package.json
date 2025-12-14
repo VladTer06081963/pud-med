@@ -1,0 +1,16 @@
+{
+  "name": "padmed",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "google-translate-api-x": "^10.6.8"
+  }
+}
