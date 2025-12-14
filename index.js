@@ -1,8 +1,9 @@
 import translate from 'google-translate-api-x';
 
 const PUBMED_API_KEY = ''; // Можно оставить пустым
+const count = 5;
 
-async function getAndTranslateArticles(query, count = 3) {
+async function getAndTranslateArticles(query, count) {
     try {
         console.log(`🔎 Поиск в PubMed: "${query}"...`);
 
@@ -47,7 +48,7 @@ async function getAndTranslateArticles(query, count = 3) {
 
             console.log(`🆔 PMID: ${id}`);
             console.log(`🇬🇧 EN: ${originalTitle}`);
-            console.log(`🇷🇺 RU: ${translation.text}`);
+            console.log(`🇺🇦 UA: ${translation.text}`);
             console.log(`🔗 https://pubmed.ncbi.nlm.nih.gov/${id}/`);
             console.log('-'.repeat(50));
         }
@@ -58,4 +59,4 @@ async function getAndTranslateArticles(query, count = 3) {
     }
 }
 
-getAndTranslateArticles("diabetes treatment 2025", 3);
+getAndTranslateArticles("diabetes treatment 2025", count);
